@@ -99,23 +99,38 @@ if (files.image3) form.append("image3", files.image3);
 if (files.image4) form.append("image4", files.image4);
 
         // addProduct(productData);
-        try {
-   const response = await api.post("/products", form, {
-    headers: {
-        "Content-Type": "multipart/form-data",
-    },
-});
+//         try {
+//    const response = await api.post("/products", form, {
+//     headers: {
+//         "Content-Type": "multipart/form-data",
+//     },
+// });
+//     console.log(response.data);
+//     alert('Product added successfully!');
+//     navigate('/products');
+// } catch (error) {
+//     console.error(error);
+//     alert('Failed to add product');
+// }
+
+//         // Show success and navigate
+//         alert('Product added successfully!');
+//         navigate('/products');
+
+try {
+    const response = await api.post("/products", form);
+
     console.log(response.data);
-    alert('Product added successfully!');
-    navigate('/products');
+    alert("Product added successfully!");
+    navigate("/products");
+
 } catch (error) {
-    console.error(error);
-    alert('Failed to add product');
+    console.error("Add product error:", error);
+    alert("Failed to add product");
 }
 
-        // Show success and navigate
-        alert('Product added successfully!');
-        navigate('/products');
+
+
     };
 
     return (
