@@ -1,9 +1,7 @@
 import axios from "axios";
-
 const api = axios.create({
-  baseURL: "http://localhost:3000/api", // Change port if your backend uses another port
+  baseURL: "https://koranza-backend.vercel.app/api",
 });
-
 
 
 export const paymentAPI = {
