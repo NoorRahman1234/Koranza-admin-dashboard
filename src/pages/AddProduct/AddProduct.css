@@ -1,0 +1,155 @@
+.form-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.form-card h3 {
+    margin-bottom: 25px;
+    color: var(--text-dark);
+    font-size: 1.3rem;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.add-product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    background-color: #fafafa;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    background-color: white;
+    box-shadow: 0 0 0 2px rgba(211, 84, 0, 0.1);
+}
+
+.error-text {
+    color: #e53e3e;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.cancel-btn {
+    background-color: #f1f2f6;
+    color: #333;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid #e1e1e1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cancel-btn:hover {
+    background-color: #e2e6ea;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #b84700 100%);
+    color: white;
+    padding: 12px 32px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(211, 84, 0, 0.2);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(211, 84, 0, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Mobile Adjustments for Actions */
+@media (max-width: 480px) {
+    .form-card {
+        padding: 20px 15px;
+    }
+
+    .form-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+        /* Put primary action on top usually, or just stack them */
+    }
+
+    .cancel-btn,
+    .submit-btn {
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+    }
+    .form-grid{
+        display: inline;
+    }
+}

@@ -1,0 +1,212 @@
+.orders-page-container {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 32px 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #333;
+}
+
+.page-header-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+}
+
+.content-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  max-width: 980px;
+  margin: 0 auto 28px auto;
+  position: relative;
+}
+
+.table-heading {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin-bottom: 28px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table th {
+  font-size: 11px;
+  font-weight: 700;
+  color: #a0a5ba;
+  letter-spacing: 0.6px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.custom-table td {
+  padding: 18px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.text-secondary { color: #70757a; }
+.text-primary-bold { font-weight: 700; color: #1f2937; }
+.text-primary { font-weight: 500; color: #1f2937; }
+.align-right { text-align: right; }
+.align-center { text-align: center; }
+
+/* Dynamic Status Badge Colors */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.status-pill.pending {
+  background-color: #fef7e0;
+  color: #b06000;
+}
+
+.status-pill.processing {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+}
+
+.status-pill.delivered {
+  background-color: #e6f4ea;
+  color: #137333;
+}
+
+.status-pill.cancelled {
+  background-color: #fce8e6;
+  color: #c5221f;
+}
+
+.status-pill select {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 13px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.action-link {
+  background: transparent;
+  border: none;
+  color: #10b981;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.action-link:hover {
+  text-decoration: underline;
+}
+
+/* Modal Details */
+.modal-section {
+  margin-top: 16px;
+}
+
+.close-icon-btn {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.modal-header-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 24px;
+}
+
+.info-summary-box {
+  background-color: #f9fafb;
+  border-radius: 12px;
+  padding: 20px 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-label {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-bottom: 4px;
+  margin-top: 10px;
+}
+
+.field-label:first-child { margin-top: 0; }
+
+.field-value { font-size: 14px; color: #374151; }
+.field-value.bold { font-weight: 700; color: #111827; }
+
+/* Status Text Colors in Modal */
+.status-text.pending { color: #b06000; font-weight: 600; }
+.status-text.processing { color: #1a73e8; font-weight: 600; }
+.status-text.delivered { color: #10b981; font-weight: 600; }
+.status-text.cancelled { color: #c5221f; font-weight: 600; }
+
+.center-subheading {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.items-subtable th {
+  text-transform: none;
+}
+
+.totals-footer {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.totals-row {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.totals-row.highlight {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 4px;
+}
+
+.totals-row .bold {
+  font-weight: 700;
+  color: #111827;
+}
+
+.total-accent-price {
+  color: #ea580c;
+  font-weight: 800;
+}
