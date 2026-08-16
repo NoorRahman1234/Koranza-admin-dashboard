@@ -118,14 +118,18 @@ if (files.image4) form.append("image4", files.image4);
 //         navigate('/products');
 
 try {
-    const response = await api.post("/products", form);
+    const response = await api.post("/products", form, {
+        headers: {
+            "Content-Type": "multipart/form-data",
+        },
+    });
 
     console.log(response.data);
     alert("Product added successfully!");
     navigate("/products");
 
 } catch (error) {
-    console.error("Add product error:", error);
+    console.error(error);
     alert("Failed to add product");
 }
 
