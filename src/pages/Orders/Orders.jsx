@@ -2,7 +2,8 @@
 
 
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import api from '../../services/api';
 import Header from '../../components/Header/Header';
 import './Orders.css';
 
@@ -18,7 +19,8 @@ const AdminOrders = ({ toggleSidebar }) => {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/orders');
+      // const response = await axios.get('http://localhost:3000/api/orders');
+      const response = await api.get('/orders');
 
       if (response.data.success) {
         setOrders(response.data.data);
@@ -35,12 +37,18 @@ const AdminOrders = ({ toggleSidebar }) => {
     const targetId = order._id || order.id;
 
     try {
-      const res = await axios.put(
-        `http://localhost:3000/api/orders/${targetId}`,
-        {
-          status: newStatus
-        }
-      );
+      // const res = await axios.put(
+      //   `http://localhost:3000/api/orders/${targetId}`,
+      //   {
+      //     status: newStatus
+      //   }
+      // );
+      const res = await api.put(
+  `/orders/${targetId}`,
+  {
+    status: newStatus
+  }
+);
 
       if (res.data.success) {
         // Update main orders table state
