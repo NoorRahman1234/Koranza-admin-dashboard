@@ -128,9 +128,15 @@ try {
     alert("Product added successfully!");
     navigate("/products");
 
+// } catch (error) {
+//     console.error(error);
+//     alert("Failed to add product");
+// }
+
 } catch (error) {
-    console.error(error);
-    alert("Failed to add product");
+    console.error("Full error details:", error);
+    const serverMessage = error.response?.data?.message || error.message;
+    alert(`Failed to add product: ${serverMessage}`);
 }
 
 
@@ -165,9 +171,16 @@ try {
                                     onChange={handleChange}
                                 >
                                     <option value="">Select category</option>
-                                    {categories.filter(cat => cat.status === 'Active').map(cat => (
+                                    {/* {categories.filter(cat => cat.status === 'Active').map(cat => (
                                         <option key={cat.id} value={cat.name}>{cat.name}</option>
-                                    ))}
+                                    ))} */}
+
+{categories.filter(cat => cat.status === 'Active').map(cat => (
+    <option key={cat._id || cat.id} value={cat.name}>{cat.name}</option>
+))}
+
+
+
                                 </select>
                                 {errors.category && <span className="error-text">{errors.category}</span>}
                             </div>
